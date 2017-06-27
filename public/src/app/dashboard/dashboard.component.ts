@@ -14,9 +14,9 @@ export class DashboardComponent{
     private _cookieService: CookieService,
     private _router: Router,
   ) {
-    if(!this._cookieService.get('userid')){
-      this._router.navigate(['']);
-    }
+    // if(!this._cookieService.get('userid')){
+    //   this._router.navigate(['']);
+    // }
   }
 
   logout(){

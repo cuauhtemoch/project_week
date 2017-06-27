@@ -21,6 +21,7 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -33,9 +34,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // remember to import components
 
 
+
 var routes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_2__login_login_component__["a" /* LoginComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'registration', component: __WEBPACK_IMPORTED_MODULE_4_app_registration_registration_component__["a" /* RegistrationComponent */] },
     { path: '**', redirectTo: '' },
 ];
 var AppRoutingModule = (function () {
@@ -75,7 +78,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/x.x.x/ng2-bootstrap.min.js\"></script>\n   <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\">\n</head>\n<div class=\"wrapper\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<head>\n  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/x.x.x/ng2-bootstrap.min.js\"></script>\n   <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\">\n</head>\n\n  <router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -128,6 +131,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__http_service__ = __webpack_require__("../../../../../src/app/http.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__login_login_component__ = __webpack_require__("../../../../../src/app/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__ = __webpack_require__("../../../../../src/app/registration/registration.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -135,6 +139,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -155,7 +160,8 @@ AppModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_8__login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__dashboard_dashboard_component__["a" /* DashboardComponent */]
+            __WEBPACK_IMPORTED_MODULE_9__dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__registration_registration_component__["a" /* RegistrationComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -224,9 +230,9 @@ var DashboardComponent = (function () {
         this._router = _router;
         this.name = this._cookieService.get('username');
         this.userid = this._cookieService.get('userid');
-        if (!this._cookieService.get('userid')) {
-            this._router.navigate(['']);
-        }
+        // if(!this._cookieService.get('userid')){
+        //   this._router.navigate(['']);
+        // }
     }
     DashboardComponent.prototype.logout = function () {
         this._cookieService.remove('userid');
@@ -303,7 +309,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".red{\n  color: red;\n}\n\nh4{\n  color: red;\n  }\n\nbody { \n  padding-top: 70px; \n  }\n\n  .body{\n    height: 150px;\n    width: 150px;\n    display: inline-block;\n    vertical-align: top;\n    padding-left: 50px;\n  }", ""]);
+exports.push([module.i, ".container{\n  border: solid 5px red;\n}\n\n.scontain{\n  border: solid 5px blue;\n}\n\nh4{\n  color: red;\n  text-align: center;\n  }\n  h5{\n  color: black;\n  text-align: center;\n  }\n\nbody { \n  padding-top: 70px; \n  }\n\n  .body{\n    height: 150px;\n    width: 150px;\n    display: inline-block;\n    vertical-align: top;\n    padding-left: 50px;\n  }\n\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n\n", ""]);
 
 // exports
 
@@ -316,7 +322,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>  \n  <head>  \n\n  </head>\n  <body>\n\n    <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n      <div class=\"container\">\n          <a class=\"navbar-brand\" href=\"#\">Kinder Care</a>\n        <div class=\"navbar-header\">\n          <ul class=\"nav navbar-nav\">\n            <li><a href=\"\">Programs & Curriculum</a></li>\n            <li><a href=\"\">Upcoming Events</a></li>\n            <li><a href=\"\">Testimonials</a></li>\n            <li><a href=\"\">About US</a></li>\n            <li><a href=\"\">Contact US</a></li>\n          </ul>\n        </div>\n      </div>\n    </nav> \n\n    <!--<img src=\"http://shepherdskids.com/wp-content/uploads/2013/01/banner_preschool_volunteer.jpg\" alt=\"\">-->\n    \n    \n    \n    <div class=\"body\">\n      <h4>Join us for Summer!</h4>\n      <h5>Our summer themed curriculum is jam-packed with fun and learning to engage your kids with a new adventure every two weeks.</h5>\n\n    </div>\n\n\n\n    <div class=\"body\">\n      <h4>Explore our programs & curriculums</h4>\n      <h5>Our whole-child approach really works.</h5>\n      <select name=\"programs\" >\n        <option value=\"browse\">Browse programs by age</option>\n        <option value=\"infant\">Infant Daycare</option>\n        <option value=\"toddler\">Toddler DayCare</option>\n        <option value=\"discovery\">Discovery Preschool</option>\n      </select>\n\n    </div>\n\n\n    <div class=\"body\">\n      <h4>Testimonials</h4>\n      <h5>Read about KinderCare experiences from people who know best: parents just like you.</h5>\n    </div>\n\n\n    <div class=\"body\">\n      <h4>Contact Us</h4>\n    </div>\n\n\n\n  </body>\n</html>\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!--<h2>Login</h2> LOG IN<<<<<<<\n<form #regForm='ngForm' (submit)='onSubmit(first_name, regForm)'>\n  <input type=\"text\" name=\"name\" placeholder=\"First name\" [(ngModel)]='first_name' #name='ngModel' required minlength='2'>\n  <input [disabled]='!regForm.valid' type=\"submit\">\n</form>\n<div *ngIf='name.errors && (name.touched || regForm.submitted )' class='red'>\n  <div *ngIf='name.errors.required'>Name is required</div>\n  <div *ngIf='name.errors.minlength'>Name must be at least 2 characters</div>\n</div>\n<div class='red'>{{ err }}</div>-->"
+module.exports = "\n<html>  \n  <head>  \n  </head>\n  <body>\n    <div class=\"container\">\n      <nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n        <a class=\"navbar-brand\" href=\"#\">Kinder Care</a>\n          <div class=\"navbar-header\">\n          <ul class=\"nav navbar-nav\">\n            <li><a href=\"\">Programs & Curriculum</a></li>\n            <li><a href=\"\">Upcoming Events</a></li>\n            <li><a href=\"\">Testimonials</a></li>\n            <li><a href=\"\">About US</a></li>\n            <li><a href=\"\">Contact US</a></li>\n            <li><a href=\"\">Contact US</a></li>\n            <li><a class=\"btn btn-success\" [routerLink]=\"['/registration']\" role=\"button\">Register Today!</a></li>\n          </ul>\n        </div>\n      </nav>\n      <div class=\"center-block\">\n        <img src=\"http://griffithpreschool.org/wp-content/uploads/2015/04/cropped-Griffith-PreSchool-and-Kindergaten-Header.jpg\" alt=\"\" class=\"img-responsive\">\n      </div>\n      <div class=\"row\">\n        <div class=\"col-md-3\">\n          <h4>Join us for Summer!</h4>\n          <h5>Our summer themed curriculum is jam-packed with fun and learning to engage your kids with a new adventure every two weeks.</h5>\n        </div>\n        <div class=\"col-md-3\">\n          <h4>Explore our programs & curriculums</h4>\n          <h5>Our whole-child approach really works.</h5>\n          <select name=\"programs\" >\n            <option value=\"browse\">Browse programs by age</option>\n            <option value=\"infant\">Infant Daycare</option>\n            <option value=\"toddler\">Toddler DayCare</option>\n            <option value=\"discovery\">Discovery Preschool</option>\n          </select>\n        </div>\n        <div class=\"col-md-3\">\n          <h4>Testimonials</h4>\n          <h5>Read about KinderCare experiences from people who know best: parents just like you.</h5>\n        </div>\n        <div class=\"col-md-3\">\n          <h4>Contact Us</h4>\n      </div>\n\n      </div> <!--scontain-->\n    </div><!--Container-->\n  </body>\n</html>\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!--<h2>Login</h2> LOG IN<<<<<<<\n<form #regForm='ngForm' (submit)='onSubmit(first_name, regForm)'>\n  <input type=\"text\" name=\"name\" placeholder=\"First name\" [(ngModel)]='first_name' #name='ngModel' required minlength='2'>\n  <input [disabled]='!regForm.valid' type=\"submit\">\n</form>\n<div *ngIf='name.errors && (name.touched || regForm.submitted )' class='red'>\n  <div *ngIf='name.errors.required'>Name is required</div>\n  <div *ngIf='name.errors.minlength'>Name must be at least 2 characters</div>\n</div>\n<div class='red'>{{ err }}</div>-->"
 
 /***/ }),
 
@@ -350,9 +356,9 @@ var LoginComponent = (function () {
         this._router = _router;
         this.first_name = '';
         this.err = '';
-        if (this._cookieService.get('userid')) {
-            this._router.navigate(['dashboard']);
-        }
+        // if (this._cookieService.get('userid')){
+        //   this._router.navigate(['dashboard']);
+        // }
     }
     LoginComponent.prototype.onSubmit = function (name, form) {
         var _this = this;
@@ -380,6 +386,67 @@ LoginComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/registration/registration.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/registration/registration.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  registration works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/registration/registration.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegistrationComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RegistrationComponent = (function () {
+    function RegistrationComponent() {
+    }
+    RegistrationComponent.prototype.ngOnInit = function () {
+    };
+    return RegistrationComponent;
+}());
+RegistrationComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-registration',
+        template: __webpack_require__("../../../../../src/app/registration/registration.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/registration/registration.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], RegistrationComponent);
+
+//# sourceMappingURL=registration.component.js.map
 
 /***/ }),
 

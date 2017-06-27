@@ -1,61 +1,51 @@
+
 <html>  
   <head>  
-
   </head>
   <body>
-
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-          <a class="navbar-brand" href="#">Kinder Care</a>
-        <div class="navbar-header">
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a class="navbar-brand" href="#">Kinder Care</a>
+          <div class="navbar-header">
           <ul class="nav navbar-nav">
             <li><a href="">Programs & Curriculum</a></li>
             <li><a href="">Upcoming Events</a></li>
             <li><a href="">Testimonials</a></li>
             <li><a href="">About US</a></li>
             <li><a href="">Contact US</a></li>
+            <li><a href="">Contact US</a></li>
+            <li><a class="btn btn-success" [routerLink]="['/registration']" role="button">Register Today!</a></li>
           </ul>
         </div>
+      </nav>
+      <div class="center-block">
+        <img src="http://griffithpreschool.org/wp-content/uploads/2015/04/cropped-Griffith-PreSchool-and-Kindergaten-Header.jpg" alt="" class="img-responsive">
       </div>
-    </nav> 
+      <div class="row">
+        <div class="col-md-3">
+          <h4>Join us for Summer!</h4>
+          <h5>Our summer themed curriculum is jam-packed with fun and learning to engage your kids with a new adventure every two weeks.</h5>
+        </div>
+        <div class="col-md-3">
+          <h4>Explore our programs & curriculums</h4>
+          <h5>Our whole-child approach really works.</h5>
+          <select name="programs" >
+            <option value="browse">Browse programs by age</option>
+            <option value="infant">Infant Daycare</option>
+            <option value="toddler">Toddler DayCare</option>
+            <option value="discovery">Discovery Preschool</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <h4>Testimonials</h4>
+          <h5>Read about KinderCare experiences from people who know best: parents just like you.</h5>
+        </div>
+        <div class="col-md-3">
+          <h4>Contact Us</h4>
+      </div>
 
-    <!--<img src="http://shepherdskids.com/wp-content/uploads/2013/01/banner_preschool_volunteer.jpg" alt="">-->
-    
-    
-    
-    <div class="body">
-      <h4>Join us for Summer!</h4>
-      <h5>Our summer themed curriculum is jam-packed with fun and learning to engage your kids with a new adventure every two weeks.</h5>
-
-    </div>
-
-
-
-    <div class="body">
-      <h4>Explore our programs & curriculums</h4>
-      <h5>Our whole-child approach really works.</h5>
-      <select name="programs" >
-        <option value="browse">Browse programs by age</option>
-        <option value="infant">Infant Daycare</option>
-        <option value="toddler">Toddler DayCare</option>
-        <option value="discovery">Discovery Preschool</option>
-      </select>
-
-    </div>
-
-
-    <div class="body">
-      <h4>Testimonials</h4>
-      <h5>Read about KinderCare experiences from people who know best: parents just like you.</h5>
-    </div>
-
-
-    <div class="body">
-      <h4>Contact Us</h4>
-    </div>
-
-
-
+      </div> <!--scontain-->
+    </div><!--Container-->
   </body>
 </html>
 
