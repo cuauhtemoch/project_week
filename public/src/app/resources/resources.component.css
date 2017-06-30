@@ -1,9 +1,5 @@
 .container{
-  margin: auto;
-}
-
-body{
-  background-color: black;
+  /*border: solid 5px red;*/
 }
 
 h1{
@@ -41,19 +37,27 @@ body {
   margin-right: auto;
 }
 
-.col-md-4{
+.col-md-5{
   padding-top: 20px;
-  margin-right: 0px;
+  margin-right: 20px;
   margin-top: 20px;
-  margin-left: 0px;
+  margin-left: 15px;
   margin-bottom: 20px;
   background-color: #ffffff;
-  height: 350px;
-  
+  height: 520px;
+  /*border: solid 2px black;*/
 }
-
-select{
-  height: 20px;
-  width: 133px;
-  font-size: 10px;
+.col-md-4{
+  padding-top: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  height: 300px;
+  /*border: solid 2px black;*/
+}
+agm-map {
+  height: 400px;
+  width: 930px;
 }

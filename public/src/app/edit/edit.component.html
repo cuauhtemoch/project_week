@@ -1,13 +1,11 @@
-<html>
-  <body>
-    
-    
-    <div class="container">
-      <br><br><br>
-      <h2>Enroll Now!</h2>
-      
-      <h3>Parent's Information</h3>
-      <form #regForm='ngForm' (submit)='onSubmit(regForm)'>
+<br><br><br>
+
+
+
+<div class="container">
+  
+<h3>Update your Information</h3>
+      <form #regForm='ngForm' (submit)='upDate()'>
 
         <input type="text" name="fname" placeholder="First Name"
         [(ngModel)]='parent.firstname' #name = 'ngModel'required minlength='2'><br>
@@ -52,13 +50,9 @@
           <div *ngIf='password.errors.minlength'>Password must be at least 8 characters</div>
         </div>
 
-        <h3>Child's Information</h3>
+        <h3>Update your Child's Information</h3>
         <input type="text" name='childname' placeholder="Child's Name"
-        [(ngModel)]='parent.childname' #childname='ngModel' required minlength='2'><br>
-        <div *ngIf='childname.errors && (childname.touched || regForm.submitted )' class='red'>
-          <div *ngIf='childname.errors.required'>Child Name is required</div>
-          <div *ngIf='childname.errors.minlength'>Child Name must be at least 5 characters</div>
-        </div>
+        [(ngModel)]='parent.childname' #childname='ngModel' required minlength='5'><br>
 
           <input placeholder="Child's Date of Birth" class="textbox-n" type="text" onfocus="(this.type='date')" 
            id="date" name="childdob" [(ngModel)]='parent.childdob' #childdob='ngModel' required>
@@ -66,27 +60,17 @@
             <div *ngIf='childdob.errors.required'>Child Date of Birth is Required</div>
           </div>
             <br>
-
-          <div class='form-group'>  
-            <label for="Select a Program">Select a Program</label><br>
-              <select name="program" [(ngModel)]='parent.program' #program='ngModel' required>
-                <option  value="Baby Daycare">Programs by Age: Baby Daycare (6 weeks-1)</option>
-                <option  value="Infant Daycare">Infant Daycare(1-2)</option>
-                <option  value="Toddler Daycare">Toddler DayCare(2-3)</option>
-                <option  value="Discovery Daycare">Discovery Preschool(3-4)</option>
-            </select>
-            <div *ngIf='program.errors && (program.touched || regForm.submitted )' class='red'>
-              <div *ngIf='program.errors.required'>Program is Required</div>
-            </div>
-          </div>
+          <select placeholder="Select a Program" 
+            name="program" [(ngModel)]='parent.program'>
+            <option  value="Baby Daycare">Programs by Age: Baby Daycare (6 weeks-1)</option>
+            <option  value="Infant Daycare">Infant Daycare(1-2)</option>
+            <option  value="Toddler Daycare">Toddler DayCare(2-3)</option>
+            <option  value="Discovery Daycare">Discovery Preschool(3-4)</option>
+          </select>
           
-        <button [disabled]='!regForm.valid' type="submit" class="btn btn-success" >Submit</button>  
-        <!--<input [disabled]='!regForm.valid' type="submit">-->
+   
+        <input [disabled]='!regForm.valid' type="submit" class="btn btn-success">
       </form>
 
-    
-  
-    
-    </div>
-  </body>
-</html>
+
+</div>

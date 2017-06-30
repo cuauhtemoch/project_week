@@ -1,11 +1,14 @@
 .container{
-  margin: auto;
+  /*border: solid 5px red;*/
 }
 
 body{
   background-color: black;
 }
 
+.scontain{
+  border: solid 5px blue;
+}
 h1{
   /*background: #f9c738;*/
   color: #ed5b32;
@@ -20,7 +23,6 @@ h4{
   }
   h5{
   color: #000;
-  /*text-align: left;*/
   }
 
 body { 
@@ -41,19 +43,23 @@ body {
   margin-right: auto;
 }
 
+.col-md-6{
+  padding-top: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  height: 770px;
+  /*border: solid 2px black;*/
+}
 .col-md-4{
   padding-top: 20px;
-  margin-right: 0px;
+  margin-right: 20px;
   margin-top: 20px;
-  margin-left: 0px;
+  margin-left: 15px;
   margin-bottom: 20px;
   background-color: #ffffff;
   height: 350px;
-  
-}
-
-select{
-  height: 20px;
-  width: 133px;
-  font-size: 10px;
+  /*border: solid 2px black;*/
 }

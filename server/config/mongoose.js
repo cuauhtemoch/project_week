@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
-mongoose.connect('mongodb://localhost/beltExam');
+mongoose.connect('mongodb://localhost/project_week');
 var Schema = mongoose.Schema;
 var models_path = path.join(__dirname, './../models');
 fs.readdirSync(models_path).forEach(function(file) {

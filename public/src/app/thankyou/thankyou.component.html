@@ -1,0 +1,24 @@
+
+<br><br><br>
+<div class="container">
+  <h2>Thank You {{ name }}! You will be contacted as soon as possible</h2>
+  
+  <br> <br>
+  <h3>Your Information</h3>
+  <div *ngFor='let parent of parents'>
+    <h4>Name:{{parent.firstname}} {{parent.lastname}}</h4>
+    <h4>Phone Number: {{parent.pnumber}}</h4>
+    <h4>Email: {{parent.email}}</h4>
+    <br>
+
+    <h4>Your Child's Information</h4>
+    <h4>Name: {{parent.childname}}</h4>
+    <h4>Date of Birth: {{parent.childdob | date:'yMMMd'}}</h4>
+    <h4>Program Selected: {{parent.program}}</h4>
+
+
+  </div>
+
+  <br>
+  <button class="btn btn-primary" [routerLink]="['/edit']">Edit Your Information</button>
+  <button class='btn btn-danger' (click)='logout()'>Logout</button>

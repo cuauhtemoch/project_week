@@ -1,2 +1,56 @@
-<h2>Hello {{ name }} {{ userid }}</h2>
-<button (click)='logout()'>Logout</button>
+<br>
+<br>
+<br>
+
+
+
+<div class="container">
+    <h2>Welcome {{ name }}</h2>
+    
+
+
+    <div class='container'>
+        <div *ngIf='!loggedin'><!--if user not logged in-->
+            <h3>Username</h3>
+            <form #regForm='ngForm' (submit)='onSubmit(regForm, parent.username)'>
+            <input type="text" name="username" placeholder=""
+            [(ngModel)]='parent.username' #username='ngModel' required minlength="5"><br>
+            <div *ngIf='username.errors && (username.touched || regForm.submitted )' class='red'>
+                <div *ngIf='username.errors.required'>Username is required</div>
+                <div *ngIf='username.errors.minlength'>Username must be at least 5 characters</div>
+            </div>
+            <p *ngIf = "username_doesnt">Username doesnt exist</p>
+
+        <h3>Password</h3>
+            <input type="password" name="password" placeholder=""
+            [(ngModel)]='parent.password' #password='ngModel' required minlength="8"><br>
+            <div *ngIf='password.errors && (password.touched || regForm.submitted )' class='red'>
+                <div *ngIf='password.errors.required'>Password is required</div>
+                <div *ngIf='password.errors.minlength'>Password must be at least 8 characters</div>
+            </div>
+            <p *ngIf = "pwd_notcorrent">Not match your password.</p>
+            <input [disabled]='!regForm.valid' type="submit">
+            </form>
+        </div>
+    </div>
+
+    <div class='container' *ngIf='loggedin'>   
+        <div *ngFor='let parent of parents'>
+            <h3>Your Information</h3>
+            <h4>Name: {{ parent.firstname }} {{ parent.lastname }}</h4>
+            <h4>E-mail: {{ parent.email }}</h4>
+            <h4>Phone Number: {{ parent.pnumber }}</h4>
+        
+            <h3>Your Child's Information</h3>
+            <h4>Name: {{parent.childname}} </h4>
+            <h4>Birthday: {{parent.childdob | date:'yMMMd' }}</h4>
+            <h4>Program Selected: {{parent.program}}</h4>
+
+        </div>
+        <br><br>
+        <button class="btn btn-danger" (click)='logout()'>Logout</button>
+        <button class="btn btn-primary" [routerLink]="['/edit']">Edit Your Information</button>
+
+    </div>
+
+</div>

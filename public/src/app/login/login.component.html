@@ -3,71 +3,28 @@
   <head>  
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <a class="navbar-brand" href="#">Kinder Care</a>
-          <div class="navbar-header">
-          <ul class="nav navbar-nav">
-            <li><a href="">Programs & Curriculum</a></li>
-            <li><a href="">Upcoming Events</a></li>
-            <li><a href="">Testimonials</a></li>
-            <li><a href="">About US</a></li>
-            <li><a href="">Contact US</a></li>
-            <li><a href="">Contact US</a></li>
-            <li><a class="btn btn-success" [routerLink]="['/registration']" role="button">Register Today!</a></li>
-          </ul>
-        </div>
-      </nav>
+    <div class="container">      
       <div class="center-block">
+        <h1>Welcome to Anastasia! </h1>
         <img src="http://griffithpreschool.org/wp-content/uploads/2015/04/cropped-Griffith-PreSchool-and-Kindergaten-Header.jpg" alt="" class="img-responsive">
       </div>
       <div class="row">
-        <div class="col-md-3">
-          <h4>Join us for Summer!</h4>
+        <div class="col-md-4">
+          <img src="http://www.hermancelaw.com/wp-content/uploads/iStock_000047177094Large.jpg" alt="" class="img-responsive">
+          <h4>Parenting. It's a real trip</h4>
+          <h5>Our education and parenting experts are here to help every scoot, toddle, and step of the way.</h5>
+        </div>
+        <div class="col-md-4">
+          <img src="https://news.virginia.edu/sites/default/files/styles/uva_basic_article/public/article_image/daycare_header.jpg?itok=ezyrdIE-" alt="" class="img-responsive">
+          <h4>Join us for Summer!.</h4>
           <h5>Our summer themed curriculum is jam-packed with fun and learning to engage your kids with a new adventure every two weeks.</h5>
         </div>
-        <div class="col-md-3">
-          <h4>Explore our programs & curriculums</h4>
-          <h5>Our whole-child approach really works.</h5>
-          <select name="programs" >
-            <option value="browse">Browse programs by age</option>
-            <option value="infant">Infant Daycare</option>
-            <option value="toddler">Toddler DayCare</option>
-            <option value="discovery">Discovery Preschool</option>
-          </select>
+        <div class="col-md-4">
+          <img src="http://www.kindercare.com/-/media/kindercare/features/schoolreadyimg-930x525.jpg" alt="" class="img-responsive">
+          <h4>Our kids are taking off!</h4>
+          <h5>By kindergarten, our kids are testing ahead of their peers. Read all about it.</h5>
         </div>
-        <div class="col-md-3">
-          <h4>Testimonials</h4>
-          <h5>Read about KinderCare experiences from people who know best: parents just like you.</h5>
-        </div>
-        <div class="col-md-3">
-          <h4>Contact Us</h4>
-      </div>
-
       </div> <!--scontain-->
     </div><!--Container-->
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<h2>Login</h2> LOG IN<<<<<<<
-<form #regForm='ngForm' (submit)='onSubmit(first_name, regForm)'>
-  <input type="text" name="name" placeholder="First name" [(ngModel)]='first_name' #name='ngModel' required minlength='2'>
-  <input [disabled]='!regForm.valid' type="submit">
-</form>
-<div *ngIf='name.errors && (name.touched || regForm.submitted )' class='red'>
-  <div *ngIf='name.errors.required'>Name is required</div>
-  <div *ngIf='name.errors.minlength'>Name must be at least 2 characters</div>
-</div>
-<div class='red'>{{ err }}</div>-->
